@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Elsas Pizza</title>
+</head>
+<body>
+    <header>
+        <h1>Pizza Bot</h1>
+        <div class="menu">
+            Menu:
+            <ul>
+                <li>Vegetarian Pizza</li>
+                <li>Hawaiian Pizza</li>
+                <li>Pepperoni Pizza</li>
+            </ul>
+        </div>
+    </header>
+    
+    <main>
+        <h2>
+            Hey! Happy to serve your pizza. On our menu we have Vegetarian Pizza, Hawaiian Pizza and Pepperoni Pizza. Select the pizza of your choosing by clicking the pictures below 👇 
+        </h2>
+
+        <div class="pizza-pictures">
+            <img class="pizza" id="veggie" src="veggie.jpg" alt="Vegetarian Pizza">
+            <img class="pizza" id="hawaii" src="hawaiian.jpg" alt="Hawaiian Pizza">
+            <img class="pizza" id="peppe" src="pepperoni.jpg" alt="Pepperoni Pizza">
+        </div>
+
+        <div class="quantity">
+            <label>
+            How many pizzas do you want?
+                <input id="pizza-quantity" type="text" name="quantity" min="1" max="50" required>
+            </label>
+        </div>
+
+        <button class="button" id="btn" type="submit" onclick="orderPizza()">Click to order your pizza!</button>
+
+        <h2 id="final-greeting"></h2>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

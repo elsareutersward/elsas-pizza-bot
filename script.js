@@ -1,15 +1,16 @@
 //Constants
-const vegetarian = "Vegetarian Pizza"
-const hawaiian = "Hawaiian Pizza"
-const pepperoni = "Pepperoni Pizza"
-
 const pizzaPrice = 80
-
 var pizzas = document.getElementsByClassName("pizza");
 var selectedPizza;
 
 
 //Functions
+const greeting = () => {
+    document.getElementById("greeting").innerHTML = `Hey! Happy to serve your pizza. 
+    On our menu we have Vegetarian Pizza, Hawaiian Pizza and Pepperoni Pizza. 
+    Select the pizza of your choosing by clicking the pictures below 👇`
+}
+
 function toggle() {
     if (selectedPizza) {
         selectedPizza.classList.toggle("active");
@@ -20,7 +21,7 @@ function toggle() {
 
 function getOrderName() {
     if (selectedPizza) {
-        return selectedPizza.id;
+        return selectedPizza.alt;
     } else {
         return
     }
@@ -48,6 +49,8 @@ const cookingTime = (orderQuantity) => {
 
 
 //Stuff that do stuff
+greeting()
+
 for (var i = 0; i < pizzas.length; i++) {
  pizzas[i].onclick = toggle
 }
@@ -55,12 +58,16 @@ for (var i = 0; i < pizzas.length; i++) {
 function orderPizza() {
     const pizzaName = getOrderName();
     const orderQuantity = getInputValue();
-    if (orderQuantity && orderQuantity > 0 && pizzaName) {
+    if (orderQuantity && orderQuantity == 1 && pizzaName) {
        document.getElementById("final-greeting").innerHTML = 
         `Great, I'll get started on your ${pizzaName} right away, it will cost ${totalCost(orderQuantity)} kr. 
-        The pizza will take ${cookingTime(orderQuantity)} minutes.`   
+        The pizza will take ${cookingTime(orderQuantity)} minutes.`  
+    } else if (orderQuantity && orderQuantity > 1 && pizzaName) {
+       document.getElementById("greeting").innerHTML = 
+        `Great, I'll get started on your ${pizzaName}s right away, it will cost ${totalCost(orderQuantity)} kr. 
+        The pizzas will take ${cookingTime(orderQuantity)} minutes.`   
     } else {
-      document.getElementById("final-greeting").innerHTML = `Please select a pizza from the menu and your desired quantity`  
+      document.getElementById("greeting").innerHTML = `Please select a pizza from the menu and your desired quantity`  
     }
   }
 

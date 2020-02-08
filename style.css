@@ -1,29 +1,42 @@
 body {
     margin: 0;
+    background-image: url(https://images.unsplash.com/photo-1527224538127-2104bb71c51b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: black;
+    color: white;
 }
 
 header {
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 60% 40%;
     grid-template-rows: auto;
     grid-template-areas: 
-        ". header menu";
+        "header menu";
     height: 150px;
 }
 
 h1 {
     grid-area: header;
-    text-align: center;
     margin: 50px;
+    font-size: 60px;
 }
 
 .menu {
     grid-area: menu;
-    margin: 40px 20px;
+    margin: 40px 20px 40px 0px;
+    font-size: 18px;
 }
 
 ul {
     margin: 0;
+    padding: 0;
+}
+
+span {
+    font-weight: bold;
 }
 
 main {
@@ -31,7 +44,7 @@ main {
 }
 
 h2 {
-    margin: 20px 50px;
+    margin: 50px 50px 20px 50px;
 }
 
 .pizza-pictures {
@@ -40,15 +53,18 @@ h2 {
 }
 
 img {
-    height: 300px;
-    width: 300px;
+    height: 280px;
+    width: 280px;
     margin: 20px;
     object-fit: cover;
-    filter: sepia(1);
+    border-radius: 50%;
+    filter: grayscale(100%);
+    opacity: 0.9;
 }
 
 .active {
-    filter: sepia(0);
+    filter: grayscale(0%);
+    opacity: 1;
   }
   
   .active + .answer {
@@ -69,9 +85,18 @@ img {
   }
 
 .quantity {
-    
+    margin: 20px;
+}
+
+label {
+    font-size: 20px;
 }
 
 button {
-    margin: 10px;
+    margin: 20px;
+    background-color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
 }

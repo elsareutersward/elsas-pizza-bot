@@ -1,38 +1,32 @@
 body {
     margin: 0;
-    background-image: url(https://images.unsplash.com/photo-1527224538127-2104bb71c51b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);
+    background-image: url(https://images.unsplash.com/photo-1527224538127-2104bb71c51b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-color: black;
     color: white;
 }
 
-header {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "header menu";
-    height: 150px;
-}
-
 h1 {
-    grid-area: header;
     margin: 50px;
     font-size: 60px;
 }
 
 .menu {
-    grid-area: menu;
-    margin: 40px 20px 40px 0px;
-    font-size: 18px;
+    margin: 40px auto;
+    font-size: 22px;
+    max-width: 70%;
 }
 
 ul {
     margin: 0;
-    padding: 0;
+    padding: 8px 0px;
+}
+
+li {
+    padding-bottom: 3px;
 }
 
 span {
@@ -41,15 +35,20 @@ span {
 
 main {
     text-align: center;
+    margin: 0px;
+    padding-bottom: 80px;
 }
 
 h2 {
-    margin: 50px 50px 20px 50px;
+    margin: 50px auto 20px auto;
+    max-width: 70%;
 }
 
 .pizza-pictures {
+    margin: 0px 20px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 img {
@@ -58,8 +57,24 @@ img {
     margin: 20px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.pizza {
     filter: grayscale(100%);
     opacity: 0.9;
+}
+
+.pizza:hover {
+    filter: grayscale(0%);
+}
+
+.pizza p {
+    position: absolute;
+    width: 320px;
+    margin-top: 140px;
+    font-size: 40px;
+    z-index: 1;
+    text-shadow: 0px 0px 3px black;
 }
 
 .active {
@@ -78,7 +93,7 @@ img {
 }
 
 label {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 button {
@@ -89,53 +104,3 @@ button {
     border-radius: 8px;
     border: none;
 }
-
-@media (max-width: 768px) {
-    .menu {
-        font-size: 16px;
-    }
-
-    h2  {
-        font-size: 20px;
-        margin-top: 100px;
-    }
-
-    img {
-        width: 180px;
-        height: 180px;
-    }
-}
-
-@media (max-width: 630px) {
-    header {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "header" 
-            "menu";
-        height: 150px;
-    }
-
-    h1 {
-        margin: 20px;
-    }
-    
-    .menu {
-        margin: 20px;
-    }
-
-    li {
-        margin-left: 20px;
-    }
-
-    h2  {
-        margin-top: 260px;
-    }
-
-    .pizza-pictures {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-

@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Elsita & Alfredo Pizza</title>
+    <title>Elsita & Alfredo Pizzeria</title>
 </head>
 <body>
     <header>
-        <h1>Elsita & Alfredo Pizza</h1>
+        <h1>Elsita & Alfredo</h1>
         <div class="menu">
             <span>Menu:</span> 
             <ul>
-                <li><span>Veggie:</span> Vegetarian Pizza with tomato, mozzarella, roasted vegetables and arugula</li>
-                <li><span>Hawii:</span> Hawaiian Pizza with tomato, mozzarella, pineapple, ham and onions</li>
-                <li><span>Peppe:</span> Pepperoni Pizza with tomato, mozarella and pepperoni</li>
+                <li><span>Veggie:</span> Pizza with tomato, mozzarella, roasted vegetables and arugula</li>
+                <li><span>Hawaiiana:</span> Pizza with tomato, mozzarella, pineapple, ham and onions</li>
+                <li><span>Peppe:</span> Pizza with tomato, mozarella and pepperoni</li>
             </ul>
         </div>
     </header>
@@ -26,15 +26,24 @@
         </div>
 
         <div class="pizza-pictures">
-            <img class="pizza" id="veggie" src="veggie.jpg" alt="Veggie">
-            <img class="pizza" id="hawaii" src="hawaiian.jpg" alt="Hawii">
-            <img class="pizza" id="peppe" src="pepperoni.jpg" alt="Peppe">
+            <div class="pizza" id="Veggie">
+                <p>Veggie</p>
+                <img src="veggie.jpg" alt="Veggie Pizza">
+            </div>
+            <div class="pizza" id="Hawaiiana">
+                <p>Hawiiana</p>
+                <img src="hawaiian.jpg" alt="Hawiian Pizza">
+            </div>
+            <div class="pizza" id="Peppe">
+                <p>Peppe</p>
+                <img src="pepperoni.jpg" alt="Pepperoni Pizza">
+            </div>
         </div>
 
         <div class="quantity">
             <label>
                 How many pizzas do you want?    
-                <input id="pizza-quantity" type="text" name="quantity" min="1" max="50" required>
+                <input id="pizzaQuantity" type="text" name="quantity" min="1" max="50" required>
             </label>
         </div>
 

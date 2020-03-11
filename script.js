@@ -21,14 +21,14 @@ function toggle() {
 
 function getOrderName() {
     if (selectedPizza) {
-        return selectedPizza.alt;
+        return selectedPizza.id;
     } else {
         return
     }
 }
 
 function getInputValue() {
-    return document.getElementById("pizza-quantity").value;
+    return document.getElementById("pizzaQuantity").value;
 }
 
 const totalCost = (orderQuantity) => {
@@ -59,7 +59,8 @@ function orderPizza() {
     const pizzaName = getOrderName();
     const orderQuantity = getInputValue();
     if (orderQuantity && orderQuantity == 1 && pizzaName) {
-       document.getElementById("final-greeting").innerHTML = 
+        console.log(orderQuantity)
+       document.getElementById("greeting").innerHTML = 
         `Great, I'll get started on your ${pizzaName} right away, it will cost ${totalCost(orderQuantity)} kr. 
         The pizza will take ${cookingTime(orderQuantity)} minutes.`  
     } else if (orderQuantity && orderQuantity > 1 && pizzaName) {

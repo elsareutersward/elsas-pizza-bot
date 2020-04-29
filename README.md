@@ -9,4 +9,4 @@ For this project I focused on creating a functional and interactive website for 
 
 ## View it live
 
-https://vibrant-ritchie-da31af.netlify.com
+https://er-pizza-bot.netlify.app/
